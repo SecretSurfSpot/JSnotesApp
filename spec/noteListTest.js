@@ -1,17 +1,17 @@
-var list = new List()
+var notelist = new NoteList()
 
 function hasNotes() {
-  assert.isTrue(list.notes.length === 0)
+  assert.isTrue(notelist.notes.length === 0)
 }
 
-function testAddNotes() {
-  list.addNotes()
-  list.addNotes()
-  assert.isTrue(list.notes.length == 2)
+function testAddNote() {
+  notelist.addNote()
+  notelist.addNote()
+  assert.isTrue(notelist.notes.length == 2)
 }
 
 hasNotes()
-testAddNotes()
+testAddNote()
 
 // this function takes as an argument a string
 // that will be the value of the text property of the note e.g. "Favourite drink: seltzer".
