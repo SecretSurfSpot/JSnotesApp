@@ -5,7 +5,7 @@ function hasNotes() {
 }
 
 function testAddNote() {
-  notelist.addNote()
+  notelist.addNote("Favourite drink: seltzer")
   notelist.addNote()
   assert.isTrue(notelist.notes.length == 2)
 }

@@ -1,7 +1,8 @@
 (function(exports) {
 
   function NoteList() {
-    this.notes = []
+    // What is "this"? In a function definition, 'this' refers to the "owner" of the function.
+    this.notes = [] // The NoteList object "owns" the 'notes' array.
   }
 
   NoteList.prototype.addNote = function(noteText) {
@@ -10,4 +11,4 @@
   }
 
   exports.NoteList = NoteList
-})(this)
+})(this) // Here 'this' refers to the NoteList object.
