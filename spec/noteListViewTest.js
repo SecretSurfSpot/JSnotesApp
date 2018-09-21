@@ -6,7 +6,7 @@ var listView = new NoteListView(notelist)
 var expectedOutputText = "<ul><li><div>Hello my name is Freddie</div></li><li><div>Hello my name is Andrew</div></li></ul>"
 
 function testDisplayNotes() {
-  assert.isTrue(listView.displayNotes = expectedOutputText)
+  assert.isTrue("NoteListView.displayNotes", listView.displayNotes = expectedOutputText)
 }
 
 testDisplayNotes()

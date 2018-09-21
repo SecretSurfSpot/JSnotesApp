@@ -1,13 +1,13 @@
 var notelist = new NoteList()
 
 function hasNotes() {
-  assert.isTrue(notelist.notes.length === 0)
+  assert.isTrue("NoteList.notes.length", notelist.notes.length === 0)
 }
 
 function testAddNote() {
   notelist.addNote("Favourite drink: seltzer")
   notelist.addNote()
-  assert.isTrue(notelist.notes.length == 2)
+  assert.isTrue("NoteList.AddNote", notelist.notes.length == 2)
 }
 
 hasNotes()
