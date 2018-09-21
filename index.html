@@ -13,9 +13,6 @@
     'Hello'
   </div>
 
-
-
-
   <script src="src/note-list-model.js"></script>
   <script src="src/note-model.js"></script>
   <script src="src/note-list-view.js"></script>
@@ -30,10 +27,10 @@
   <script>
     list = new NoteList()
     controller = new NoteController(list)
-    controller.ctrlAddNote("First Note")
-    controller.ctrlAddNote("Second Note")
-    controller.ctrlDisplayHTML()
-
+    controller.addNote("First Note")
+    controller.addNote("Second Note")
+    controller.addNote("Third Note")
+    controller.updateBrowser(app)
   </script>
 
 </body>

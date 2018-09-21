@@ -1,24 +1,10 @@
 var list = new NoteList
 var notecontroller = new NoteController(list)
-notecontroller.ctrlAddNote("First Note")
-notecontroller.ctrlAddNote("Second Note")
+notecontroller.addNote("First Note")
+notecontroller.addNote("Second Note")
 
-function testctrlAddNote() {
+function testAddNote() {
   assert.isTrue("NoteListController.ctrlAddNote", list.notes.length === 2)
-}
-
-var expectedOutput = "<ul><li><div>First Note</div></li><li><div>Second Note</div></li></ul>"
-
-function testctrlGetHTML() {
-  assert.isTrue("NoteListController.ctrlGetHTML",notecontroller.ctrlNoteListView.displayNotes() === expectedOutput)
-}
-
-function testctrlDisplayHTML() {
-  let html = notecontroller.ctrlGetHTML()
-  document.getElementById('app').innerHTML = html
-  innerHTML = document.getElementById('app').innerHTML
-  assert.isTrue("NoteListController.ctrlDisplayHTML", html === expectedOutput)
-  assert.isTrue("NoteListController.ctrlDisplayHTML", innerHTML === html)
 }
 
 function testNoteControllerInstantiation() {
@@ -26,7 +12,12 @@ function testNoteControllerInstantiation() {
   assert.isTrue("NoteListController instance exists", notecontroller);
 }
 
-testctrlAddNote()
-testctrlGetHTML()
-testctrlDisplayHTML()
+var expectedOutput = "<ul><li><div>First Note</div></li><li><div>Second Note</div></li></ul>"
+function testupdateBrowser() {
+  app.innerHTML = expectedOutput
+  assert.isTrue("NoteController.updateBrowser", app.innerHTML === expectedOutput)
+}
+
+testAddNote()
 testNoteControllerInstantiation()
+testupdateBrowser()
